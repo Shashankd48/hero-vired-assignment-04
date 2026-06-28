@@ -381,3 +381,7 @@ The deployment was verified by confirming the following:
 | ----------- | ------------------------- |
 | Frontend    | https://verbahire.com     |
 | Backend API | https://verbahire.com/api, https://verbahire.com/api/health  |
+
+# Infrastructure
+
+![Infrastructure Diagram](./infrastructure.png)
