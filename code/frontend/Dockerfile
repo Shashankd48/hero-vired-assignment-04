@@ -1,4 +1,4 @@
-FROM node:22-alpine as build
+FROM node:22-alpine AS build
 
 WORKDIR /app
 
@@ -10,9 +10,11 @@ COPY . .
 
 RUN npm run build
 
-
 FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
 
 EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+    CMD wget --spider -q http://localhost || exit 1
