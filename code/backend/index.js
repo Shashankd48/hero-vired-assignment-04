@@ -16,23 +16,22 @@ app.get('/hello', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get("/health", (req, res) => {
+app.get("/health", async (req, res) => {
+    const mongoose = require("mongoose");
 
     if (mongoose.connection.readyState === 1) {
-
         return res.status(200).json({
             status: "UP",
-            database: "CONNECTED"
+            database: "CONNECTED",
         });
-
     }
 
     return res.status(503).json({
         status: "DOWN",
-        database: "DISCONNECTED"
+        database: "DISCONNECTED",
     });
-
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server started at http://localhost:${PORT}`)
