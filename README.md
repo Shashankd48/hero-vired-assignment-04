@@ -10,7 +10,8 @@ https://github.com/Shashankd48/hero-vired-assignment-04
 
 # Deployment Architecture
 
-> Attach the deployment architecture diagram separately.
+![Infrastructure Diagram](./infrastructure.png)
+
 
 ---
 
@@ -381,7 +382,3 @@ The deployment was verified by confirming the following:
 | ----------- | ------------------------- |
 | Frontend    | https://verbahire.com     |
 | Backend API | https://verbahire.com/api, https://verbahire.com/api/health  |
-
-# Infrastructure
-
-![Infrastructure Diagram](./infrastructure.png)
